@@ -37,6 +37,7 @@ public class Bird : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         _state = BirdState.HitSomething;
+        Explode(); //Fitur tambahan burung meledak
     }
 
     void FixedUpdate()
@@ -81,4 +82,12 @@ public class Bird : MonoBehaviour
     {
         //do nothing
     }
+
+    // Fitur Tambahan
+    //------------------------------------------------------------
+    public virtual void Explode()
+    {
+        //override
+    }
+
 }

@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public float Health = 50f;
     public UnityAction<GameObject> OnEnemyDestroyed = delegate { };
     private bool _isHit = false;
+    public Rigidbody2D enemy;
 
     void OnDestroy()
     {

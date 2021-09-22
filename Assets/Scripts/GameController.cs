@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+
+
+
     public SlingShooter SlingShooter;
     public TrailController TrailController;
     public List<Bird> Birds;
@@ -16,6 +20,8 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+       
+
 
         for (int i = 0; i < Birds.Count; i++)
         {
@@ -40,7 +46,7 @@ public class GameController : MonoBehaviour
 
         if (_isGameEnded)
         {
-            return;
+            SceneManager.LoadScene("Main 2", LoadSceneMode.Single); //ganti Scene
         }
 
 
@@ -85,4 +91,5 @@ public class GameController : MonoBehaviour
         }
     }
 
+    
 }
